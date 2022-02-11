@@ -2,10 +2,13 @@
 
 class App
 {
+     private $controller = "home";
+     private $method = "index";
+     private $params = [];
     public function __construct()
     {
         $url= $this->splitURL();
-         show($url);
+         show($url[1]);
     }
 
     private function splitURL()
